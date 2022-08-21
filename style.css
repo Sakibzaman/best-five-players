@@ -1,3 +1,6 @@
 header {
   background-color: black;
 }
+footer {
+  border-top: 1px grey solid;
+}
