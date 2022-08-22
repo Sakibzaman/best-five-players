@@ -4,3 +4,11 @@ header {
 footer {
   border-top: 1px grey solid;
 }
+button {
+  background-color: rgb(56, 56, 141);
+  border: none;
+}
+header h1 {
+  color: tomato;
+  font-size: 4vw;
+}
