@@ -1,21 +1,8 @@
-function makeDisable(){
-    const btnDisable = document.getElementById('renato');
-    btnDisable.disabled = true;
-    btnDisable.style.setProperty('background-color', 'grey');
-    btnDisable.innerHTML = 'SELECTED';
-    // return btnDisable.value = 'penaldo';
-}
-
-
 // function makeDisable(){
-//     const btnDisable = document.getElementsByClassName('select-btn').disabled = true;
-//     document.getElementsByClassName('select-btn').style.setProperty('background-color', 'red', 'important');
-//     // return btnDisable.value = 'penaldo';
-// }
-
-// var selected = document.querySelectorAll(".select-btn");
-// for(var i=0, len = selected.length; i<len; i++){
-//     selected[i].onclick = makeDisable();
+//     const btnDisable = document.getElementById('renato');
+//     btnDisable.disabled = true;
+//     btnDisable.style.setProperty('background-color', 'grey');
+//     btnDisable.innerHTML = 'SELECTED';
 // }
 
 // const selectedPlayers = [];
@@ -49,12 +36,13 @@ function display(playerList){
     if(playerArray.length>5){
         return alert('You can add maximum 5 players');        
     }
- 
+
     console.log(playerList);    
     const displayPlayerList = document.getElementById("player-list");
     displayPlayerList.innerHTML = "";
 
     for(let i=0; i<playerArray.length; i++){
+        
         console.log(playerArray[i].playerName);
 
         const tr = document.createElement("tr");
@@ -64,7 +52,10 @@ function display(playerList){
         displayPlayerList.appendChild(tr);
     }
 }
+
 function addToSelected(element){
+    
+    element.parentNode.children[2]. setAttribute ('disabled', true);
     const playerName = element.parentNode.children[0].innerText;
 
     const playerObj = {
@@ -73,7 +64,7 @@ function addToSelected(element){
 
     playerArray.push(playerObj);
     console.log(playerArray.length);
-
+    
     display(playerArray);
 }
 
