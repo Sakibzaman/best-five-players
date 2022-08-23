@@ -165,25 +165,25 @@
               <h6 class="mb-2 text-white-50">Per Player</h6>
               <input
                 class="w-50"
-                type="text"
+                type="number"
                 placeholder="Price"
                 name="Player Price"
-                id="player-price"
+                id="player-price"                
               />
             </div>
-            <button class="w-100 text-light my-4 px-5 py-2 fw-semibold">
+            <button class="w-100 text-light my-4 px-5 py-2 fw-semibold"
+            onclick="calculatePlayerPrice()">
               Calculate
             </button>
-            <h6 class="mb-2 text-white-50">Player Expenses</h6>
+            <h6 class="mb-2 text-white-50">Player Expenses = <span id="player-expenses">0.00</span></h6>
 
             <div class="mt-4 d-flex justify-content-between">
               <h6 class="mb-2 text-white-50">Manager</h6>
               <input
                 class="w-50"
-                type="text"
-                placeholder="cost"
+                type="text"            
                 name="Manager Price"
-                id=""
+                id="manager-price"
               />
             </div>
 
@@ -191,17 +191,17 @@
               <h6 class="mb-2 text-white-50">Coach</h6>
               <input
                 class="w-50"
-                type="text"
-                placeholder="cost"
+                type="text"                
                 name="Coach Price"
-                id=""
+                id="coach-price"
               />
             </div>
 
-            <button class="w-100 text-light my-2 px-5 py-2 fw-semibold">
+            <button class="w-100 text-light my-2 px-5 py-2 fw-semibold" 
+            onclick="calculateTotalExpenses()">
               Calculate Total
             </button>
-            <h6 class="mb-2 text-white-50">Total</h6>
+            <h6 class="mb-2 text-white-50">Total = <span id="total-expenses">0.00</span></h6>
           </div>
         </div>
       </div>
