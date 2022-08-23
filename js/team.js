@@ -5,11 +5,12 @@ const totalPlayers = playerArray.length;
 function display(){
     if(playerArray.length>5){
         // playerArray.length=5;
-        playerArray.pop;
-        return alert('You can add maximum 5 players');        
+        playerArray.pop();
+        // console.log("playerArray.length =" + playerArray.length);
+        // console.log(playerArray.playerName);
+        alert('You can add maximum 5 players');        
     }
-
-    // console.log(playerList);    
+    
     const displayPlayerList = document.getElementById("player-list");
     displayPlayerList.innerHTML = "";
 
@@ -20,7 +21,7 @@ function display(){
         const tr = document.createElement("tr");
 
         tr.innerHTML = `
-        <td>${i+1}.${playerArray[i].playerName}</td>`;
+        <td> <span class="fw-bold">${i+1}.</span> ${playerArray[i].playerName}</td>`;
         displayPlayerList.appendChild(tr);
     }
     const selectedPlayers = playerArray.length;
@@ -28,8 +29,11 @@ function display(){
 }
 
 function addToSelected(element){
-    
+             
     element.parentNode.children[2]. setAttribute ('disabled', true);
+    element.parentNode.children[2].style.backgroundColor='grey';
+
+
     const playerName = element.parentNode.children[0].innerText;
 
     const playerObj = {

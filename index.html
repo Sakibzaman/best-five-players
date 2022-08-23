@@ -148,10 +148,11 @@
       <div class="col-3">
         <div class="card bg-dark text-light mb-4" style="width: 18rem">
           <div class="card-body" style="height: 30vh">
+            <h4 class="text-center mb-5">Selected-V</h4>
             <table>
-              <thead class="mb-5">
+              <!-- <thead class="mb-5 mx-auto">
                 <th class="h4">Selected-V</th>
-              </thead>
+              </thead> -->
               <tbody id="player-list">
                 <tr></tr>
               </tbody>
@@ -175,13 +176,13 @@
             onclick="calculatePlayerPrice()">
               Calculate
             </button>
-            <h6 class="mb-2 text-white-50">Player Expenses = <span id="player-expenses">0.00</span></h6>
+            <h6 class="mb-2 text-white-50">Player Expenses $<span id="player-expenses">0.00</span></h6>
 
             <div class="mt-4 d-flex justify-content-between">
               <h6 class="mb-2 text-white-50">Manager</h6>
               <input
                 class="w-50"
-                type="text"            
+                type="number"            
                 name="Manager Price"
                 id="manager-price"
               />
@@ -191,7 +192,7 @@
               <h6 class="mb-2 text-white-50">Coach</h6>
               <input
                 class="w-50"
-                type="text"                
+                type="number"                
                 name="Coach Price"
                 id="coach-price"
               />
@@ -201,7 +202,7 @@
             onclick="calculateTotalExpenses()">
               Calculate Total
             </button>
-            <h6 class="mb-2 text-white-50">Total = <span id="total-expenses">0.00</span></h6>
+            <h6 class="mb-2 text-white-50">Total $<span id="total-expenses">0.00</span></h6>
           </div>
         </div>
       </div>
